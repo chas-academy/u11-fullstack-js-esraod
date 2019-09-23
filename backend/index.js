@@ -18,5 +18,11 @@ const port = process.env.PORT || "3000";
 const http = require("http").Server(app);
 http.listen(port, () => console.log(`listening on port ${port}`));
 
+exec(`python waterlevel.py`, (error, stdout, stderr) => {
+    error ? console.log("Error: " + error) : null;
+    stdout ? console.log("stdout: " + stdout) : null;
+    stderr ? console.log("stderr: " + stderr) : null;
+  });
+
 
 module.exports = app;
