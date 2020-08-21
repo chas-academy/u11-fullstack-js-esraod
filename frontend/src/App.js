@@ -1,31 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import io from 'socket.io-client';
 
 function App() {
-  const socket = io('http://192.168.1.222:3000');
+  const [waterLevel, setWaterLevel] = useState(0);
 
-  socket.on('RECEIVE_DATA', (data) => {
-    console.log(data);
-  });
+  useEffect(() => {
+    const socket = io('http://localhost:3000/');
+
+    socket.on('RECEIVE_DATA', (data) => {
+      console.log(data);
+      setWaterLevel(data);
+    });
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>waterlevel</h1>
+        <h4>Bamse's waterbowl</h4>
       </header>
+      <div className="watercontent">
+        <h2> The water level is </h2>
+        <h3> {waterLevel}% </h3>
+        <div className="bowl">
+          <div className="water"></div>
+        </div>
+      </div>
     </div>
   );
 }
