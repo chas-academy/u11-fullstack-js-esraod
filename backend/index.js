@@ -24,11 +24,17 @@ http.listen(port, () => console.log(`listening on port ${port}`));
 //    stderr ? console.log("stderr: " + stderr) : null;
 //  });
 
+const socket = require('socket.io');
+global.io = socket(http);
+
+io.on('connection', (socket) => {
+});
+
 const spawn = require("child_process").spawn;
 const pythonProcess = spawn('python', [ "waterlevel.py" ]);
-
 pythonProcess.stdout.on('data', (data) => {
-console.log(data.toString());
+    console.log(data.toString());
+    io.emit('RECEIVE_DATA', data.toString() );
 });
 
 
