@@ -1,84 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  font-family: helvetica;
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	font-family: 'Rubik', sans-serif;
+    	font-family: 'Nunito', sans-serif;
+    	text-align: center;
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
-  background: #2193b0; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #6dd5ed,
-    #2193b0
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #6dd5ed,
-    #2193b0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
 }
 
 h1 {
-  font-size: 60px;
-  color: #ffffff;
-  letter-spacing: 3px;
-  text-align: center;
-  animation: flow 20s ease-in-out infinite;
-  background: linear-gradient(-75deg, #007991, #13c8ff, #78ffd6, #ffffff);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* margin-top: 30vh; */
+font-size: 60px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-align: center;
+    animation: flow 20s ease-in-out infinite;
+    background: linear-gradient(-75deg, #007991, #13c8ff, #78ffd6, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* margin-top: 30vh; */
 }
 
+
 @keyframes flow {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 h4 {
-  color: rgb(190, 190, 190);
-  letter-spacing: 3px;
+    color: rgb(190, 190, 190);
+    letter-spacing: 3px;
 }
 
 h3 {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 .bowl {
-  height: 130px;
-  width: 190px;
-  background: rgb(255, 255, 255);
-  margin: auto;
-  border-radius: 10px 10px 50px 50px;
-  border: 5px solid rgb(255, 255, 255);
+    height: 130px;
+    width: 190px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 10px 10px 50px 50px;
+    border: 5px solid rgb(255, 255, 255);
 }
 
 .water {
-  max-height: 120px;
-  width: 180px;
-  z-index: 2;
-  background: rgb(14, 235, 216);
-  margin: auto;
-  padding-top: 60px;
-  margin-top: 60px;
-  border-radius: 10px 10px 50px 50px;
-  border: 5px solid rgb(255, 255, 255);
+    max-height: 120px;
+    width: 180px;
+    z-index: 2;
+    background: rgb(14, 235, 216);
+    margin: auto;
+    padding-top: 60px;
+    margin-top: 60px;
+    border-radius: 10px 10px 50px 50px;
+    border: 5px solid rgb(255, 255, 255);
 }
